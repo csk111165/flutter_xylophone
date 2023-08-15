@@ -26,7 +26,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
               );
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -42,9 +42,6 @@ class XylophoneApp extends StatelessWidget {
              buildKey(key_color: Colors.orange, sound_number: 5),
              buildKey(key_color: Colors.blue, sound_number: 6),
              buildKey(key_color: Colors.yellow, sound_number: 7),
-            
-           
-
             ],
           ),
         ),
