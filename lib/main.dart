@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
 
-  void playTriad(int root, int third, int fifth) {
-    playSound(root);
-    playSound(third);
-    playSound(fifth);
-  }
+
   void playSound(int soundNumber)
   {
     final player = AudioPlayer();
     player.play(AssetSource('note$soundNumber.wav'));
   }
 
-  Expanded buildKey({required  key_color , required int sound_number }) {
+  Expanded buildKey({required Color key_color , required int sound_number }) {
     return Expanded(
                 child: TextButton(
                   style: ButtonStyle(
@@ -31,6 +26,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
               );
   }
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,18 +42,7 @@ class XylophoneApp extends StatelessWidget {
              buildKey(key_color: Colors.orange, sound_number: 5),
              buildKey(key_color: Colors.blue, sound_number: 6),
              buildKey(key_color: Colors.yellow, sound_number: 7),
-             Expanded(
-               child: TextButton(
-                  style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                  backgroundColor:  MaterialStateProperty.all<Color>(Colors.black),
-                  ),
-                    child: Text('C Major Chord'),
-                    onPressed: () {
-                      playTriad(1, 3, 5);
-                    },
-                  ),
-             ),
+            
            
 
             ],
