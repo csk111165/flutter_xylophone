@@ -5,6 +5,13 @@ import 'package:audioplayers/audioplayers.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
+
+
+  void playSound(int soundNumber)
+  {
+    final player = AudioPlayer();
+    player.play(AssetSource('note$soundNumber.wav'));
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,8 +25,7 @@ class XylophoneApp extends StatelessWidget {
                 backgroundColor:  MaterialStateProperty.all<Color>(Colors.green),
             ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note1.wav'));
+                  playSound(1);
                 },
                 child: Text("Play a note!"),
               ),
@@ -29,8 +35,7 @@ class XylophoneApp extends StatelessWidget {
                 backgroundColor:  MaterialStateProperty.all<Color>(Colors.orange),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playSound(2);
                 },
                 child: Text("Play a note!"),
               ),
@@ -40,8 +45,7 @@ class XylophoneApp extends StatelessWidget {
                 backgroundColor:  MaterialStateProperty.all<Color>(Colors.purple),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note3.wav'));
+                  playSound(3);
                 },
                 child: Text("Play a note!"),
               ),
@@ -51,8 +55,7 @@ class XylophoneApp extends StatelessWidget {
                 backgroundColor:  MaterialStateProperty.all<Color>(Colors.blueAccent),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note4.wav'));
+                  playSound(4);
                 },
                 child: Text("Play a note!"),
               ),
@@ -62,8 +65,7 @@ class XylophoneApp extends StatelessWidget {
                 backgroundColor:  MaterialStateProperty.all<Color>(Colors.black),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note5.wav'));
+                  playSound(5);
                 },
                 child: Text("Play a note!"),
               ),
@@ -73,8 +75,7 @@ class XylophoneApp extends StatelessWidget {
                 backgroundColor:  MaterialStateProperty.all<Color>(Colors.pinkAccent),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note6.wav'));
+                  playSound(16;
                 },
                 child: Text("Play a note!"),
               ),
@@ -84,8 +85,7 @@ class XylophoneApp extends StatelessWidget {
                 backgroundColor:  MaterialStateProperty.all<Color>(Colors.cyanAccent),
                 ),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note7.wav'));
+                  playSound(7);
                 },
                 child: Text("Play a note!"),
               ),
